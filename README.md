@@ -17,3 +17,7 @@ Usage is currently limited to the local machine only (which will be the use case
 5. users-hosts
 #### Other system files modified
 1. /etc/hosts.deny
+
+#####Thanks to:
+http://www.cyberciti.biz/faq/linux-unix-delete-remove-ip-address-that-denyhosts-blocked/
+for providing information on how to remove an IP from being blocked; this utility is based on that blog post.
