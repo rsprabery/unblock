@@ -1,5 +1,14 @@
 import argparse
 import os
+import subprocess
+
+def CMD(cmd) :
+  p = subprocess.Popen(cmd, shell=True,
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE,
+    close_fds=False)
+  return (p.stdin, p.stdout, p.stderr)
 
 
 denyhost_files = ['/etc/hosts.deny', 'hosts', 'hosts-restricted', 'hosts-root', 'hosts-valid', 'users-hosts']
@@ -41,5 +50,6 @@ if __name__ == '__main__':
 
     if not check_sudo() and args.host_addr is None:
         print "If you want to run this locally, please run with `sudo`"
-
+    CMD("sudo service denyhosts stop")
     unblock(args.ip_address)
+    CMD("sudo service denyhosts start")
