@@ -18,6 +18,7 @@ Usage is currently limited to the local machine only (which will be the use case
 
 #### Other system files modified
 1. /etc/hosts.deny
+2. /var/log/auth.log
 
 #####Thanks to:
 http://www.cyberciti.biz/faq/linux-unix-delete-remove-ip-address-that-denyhosts-blocked/
