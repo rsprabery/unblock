@@ -11,7 +11,7 @@ def CMD(cmd) :
   return (p.stdin, p.stdout, p.stderr)
 
 
-denyhost_files = ['/etc/hosts.deny', 'hosts', 'hosts-restricted', 'hosts-root', 'hosts-valid', 'users-hosts']
+denyhost_files = ['/etc/hosts.deny', 'hosts', 'hosts-restricted', 'hosts-root', 'hosts-valid', 'users-hosts', '/var/log/auth.log']
 
 
 def remove_line(text, path):
