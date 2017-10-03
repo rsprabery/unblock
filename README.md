@@ -20,6 +20,6 @@ Usage is currently limited to the local machine only (which will be the use case
 1. /etc/hosts.deny
 2. /var/log/auth.log
 
-#####Thanks to:
+##### Thanks to:
 http://www.cyberciti.biz/faq/linux-unix-delete-remove-ip-address-that-denyhosts-blocked/
 for providing information on how to remove an IP from being blocked; this utility is based on that blog post.
