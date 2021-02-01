@@ -11,7 +11,7 @@ def CMD(cmd) :
   return (p.stdin, p.stdout, p.stderr)
 
 
-denyhost_files = ['/etc/hosts.deny', 'hosts', 'hosts-restricted', 'hosts-root', 'hosts-valid', 'users-hosts', '/var/log/auth.log']
+denyhost_files = ['/etc/hosts.deny', 'hosts', 'hosts-restricted', 'hosts-root', 'hosts-valid', 'users-hosts']
 
 
 def remove_line(text, path):
@@ -41,6 +41,7 @@ def unblock(ip_address):
 
     for deny_file in denyhost_files:
         remove_line(ip_address, deny_file)
+    CMD("iptables -D INPUT -s %s -j DROP" %(ip_address))
 
 
 if __name__ == '__main__':
